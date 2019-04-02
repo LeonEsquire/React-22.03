@@ -5,16 +5,16 @@ class Login extends React.Component {
     return (
       <>
         <form action="/login">
-        <p>
+          <p>
             <strong>Логин:</strong>
-            <input type="text" name="login" maxlength="30" size="39">
-        </p>
-        <p>
+            <input type="text" name="login" maxlength="30" size="39" />
+          </p>
+          <p>
             <strong>Пароль:</strong>
-            <input type="password" name="password" maxlength="30" size="39">
-        </p>
-        <input type="submit" value="Login/Войти">
-    </form>
+            <input type="password" name="password" maxlength="30" size="39" />
+          </p>
+          <input type="submit" value="Login/Войти" />
+        </form>
       </>
     );
   }
