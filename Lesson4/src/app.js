@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import LifeCycleUnmount from './app/components/LifeCycleUnmount';
+import Blog from './app/components/Blog';
+import WelcomeModal from './app/components/WelcomeModal';
 
 class App extends React.Component {
   constructor(props) {
@@ -13,12 +14,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        {this.state.showUnmountComponent ? <LifeCycleUnmount/> : null}
+      <>
+        {this.state.showUnmountComponent ? <WelcomeModal/> : null}
         <button onClick={() => {
           this.setState({showUnmountComponent: false})
         }}>Удалить компонент</button>
-      </div>
+      </>
     );
   }
 
