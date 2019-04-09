@@ -10,7 +10,7 @@ export default class Layout extends React.Component {
     this.brand = 'React blog!';
   }
 
-  isActive(href) {
+  static isActive(href) {
     return window.location.pathname === href;
   }
 
@@ -19,11 +19,17 @@ export default class Layout extends React.Component {
     return(
       <div>
         <Menu brand={this.brand}>
-          <MenuItem href="/" active={this.isActive('/')}>
+          <MenuItem href="/" active={Layout.isActive('/')}>
             Главная
           </MenuItem>
-          <MenuItem href="/users" active={this.isActive('/users')}>
+          <MenuItem href="/users" active={Layout.isActive('/users')}>
             Пользователи
+          </MenuItem>
+          <MenuItem href="/posts" active={Layout.isActive('/posts')}>
+            Посты
+          </MenuItem>
+          <MenuItem href="/comments" active={Layout.isActive('/comments')}>
+            Комметнарии
           </MenuItem>
         </Menu>
         <div className="container">
