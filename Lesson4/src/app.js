@@ -16,14 +16,14 @@ class App extends React.Component {
   constructor(props) {
     super();
     this.state = {
-      showUnmountComponent: true
-      blogList: BlogItems
+      showUnmountComponent: true,
+      blogList: blogItems
     };
   }
   render() {
     return (
       <>
-      <Blog items={this.state.BlogList} titleBlog="Общий заголовок"/>
+      <Blog items={this.state.blogList} titleBlog="Общий заголовок"/>
         {this.state.showUnmountComponent ? <WelcomeModal/> : null}
         <button onClick={() => {
           this.setState({showUnmountComponent: false})
