@@ -3,15 +3,7 @@ import ReactDOM from 'react-dom';
 
 export default class Post extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = {
-      display: true
-    };
-  }
-
-  static getDerivedStateFromProps(props, state) {
-    console.log('2. getDerivedStateFromProps(props, state)');
-    return null;
+    super(props);  
   }
 
   render() {    
