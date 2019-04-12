@@ -24,7 +24,7 @@ export default class UsersList extends React.Component {
     }
 
     const users = this.state.users.map((user, index) => {
-      return <User key={index} {...user} />
+      return <User key={user.id} {...user} />
     })
 
     return (
