@@ -8,7 +8,7 @@ class userStore extends EventEmitter {
     this.users = [];
     this.getUsers = this.getUsers.bind(this);
     this.change = this.change.bind(this);
-    this.addUser = this.addUserind(this);
+    this.addUser = this.addUser.bind(this);
     this.handleActions = this.handleActions.bind(this);
   }
 
