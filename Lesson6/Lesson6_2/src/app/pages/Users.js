@@ -19,13 +19,15 @@ export default class Users extends React.Component {
   newUser() {
     const name = 'New User';    
     const email = 'anton1evdokimov@yandex.ru';
-    const userId = 33;
-
-    addPost(name, email, userId)
+    const id = 335;
+    const username = 'New Name';
+    const phone = '+78120000000';
+    const website = 'https://github.com';
+    addUser(name, email, username, id, phone, website)
   }
 
   onUserChange() {
-    this.setState({posts: PostStore.posts});
+    this.setState({users: UserStore.posts});
   }
 
   componentDidMount() {
@@ -40,7 +42,7 @@ export default class Users extends React.Component {
   render() {
     return (
       <div>
-        <button className="btn btn-primary" onClick={this.newUser}>Добавить пост</button>
+        <button className="btn btn-primary" onClick={this.newUser}>Добавить пользователя</button>
         <UsersList users={this.state.users}/>
       </div>
     );
