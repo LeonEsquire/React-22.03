@@ -23,7 +23,7 @@ export default class Users extends React.Component {
     const username = 'New Name';
     const phone = '+78120000000';
     const website = 'https://github.com';
-    addUser(name, email, username, id, phone, website)
+    addUser(name, email, username, id, phone, website);
   }
 
   onUserChange() {
