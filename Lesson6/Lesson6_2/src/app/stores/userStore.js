@@ -31,7 +31,8 @@ class userStore extends EventEmitter {
   handleActions(action)
   {
     switch (action.type) {
-      case ADD_USER:UserPost(action.data)
+      case ADD_USER: 
+        this.addUser(action.data)
         break;
       case GET_USERS:
         this.getUsers(action.data)
