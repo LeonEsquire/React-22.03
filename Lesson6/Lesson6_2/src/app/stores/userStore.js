@@ -22,7 +22,7 @@ class userStore extends EventEmitter {
     this.emit('change');
   }
 
-  addUser(post)
+  addUser(user)
   {
     this.users = [user, ...this.users];
     this.change()
