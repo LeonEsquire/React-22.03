@@ -5,12 +5,12 @@ export default class Comment extends React.Component {
   
   render()
   {
-    
+    //console.log(this.props.postId);
     return(
       <div className="card border-secondary mb-3">
       <div className="card-header">
       <h6>
-        <Link to={`/users/${this.props.userId}`}>
+        <Link to={`/posts/${this.props.postId}`}>
         {this.props.name}
         </Link>
       </h6>
