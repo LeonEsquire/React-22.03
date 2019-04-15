@@ -1,7 +1,16 @@
 import React from 'react';
 import {Link} from 'react-router';
+import {connect} from 'react-redux';
+import {fetchPost} from '../actions/postActions';
 
-export default class Post extends React.Component {
+class Post extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    this.props.dispatch(fetchPost(this.props.postId));
+  }
   render()
   {
     return(
@@ -15,10 +24,18 @@ export default class Post extends React.Component {
         </div>
         <div className="card-body text-secondary">
           <p>{this.props.body}</p>          
-        </div>
-        
+        </div>        
       </div>
       
     );
-  }
+  }  
 }
+
+function mapStateToProps(state) {
+  return {
+    post: state.post.post,
+    postFetched: state.post.fetched
+  };
+}
+
+export default connect(mapStateToProps)(Post);
