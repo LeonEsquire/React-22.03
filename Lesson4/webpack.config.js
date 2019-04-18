@@ -6,6 +6,13 @@ module.exports = {
 		filename: 'main.js',
 		path: path.resolve(__dirname, 'dist')
 	},
+	
+	devServer: {
+		// настройка сервера
+		historyApiFallback: true,
+		contentBase: path.resolve(__dirname, 'dist'),
+	},
+
 	mode: 'development',
 	module: {
 		rules: [

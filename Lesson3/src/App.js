@@ -1,18 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Menu from './Menu';
-
+import Login from './Login';
 
 class App extends React.Component {
   render() {
     const menuItems = [
-      {href:'/', title: 'Главная'},
-      {href:'/about', title: 'О нас'},
-      {href:'/service', title: 'Услуги'},
-      {href:'/contacts', title: 'Контакты'},
+      {id: 31, href:'/', title: 'Главная'},
+      {id: 32, href:'/about', title: 'О нас'},
+      {id: 33, href:'/service', title: 'Услуги'},
+      {id: 34, href:'/contacts', title: 'Контакты'},
     ];
 
     return <div>
+      <Login />
       <h1>Первое приложение на React</h1>
       <p>Hello React!</p>
       <Menu items={menuItems} titleMenu="Основное меню сайта"/>
@@ -20,4 +21,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App/>, document.querySelector('#root'));
+ReactDOM.render(<App/>, document.getElementById('root'));

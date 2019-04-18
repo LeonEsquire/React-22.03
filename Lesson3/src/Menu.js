@@ -4,7 +4,7 @@ import MenuItem from './MenuItem';
 class Menu extends React.Component {
   render() {
     const items = this.props.items.map((item, index) => {
-      return <MenuItem key={index} href={item.href}>{item.title}</MenuItem>
+      return <MenuItem key={item.id} href={item.href}>{item.title}</MenuItem>
     })
     
     return (
@@ -19,10 +19,3 @@ class Menu extends React.Component {
 }
 
 export default Menu;
-
-// const menuItems = [
-//   {href:'/', title: 'Главная'},
-//   {href:'/about', title: 'О нас'},
-//   {href:'/service', title: 'Услуги'},
-//   {href:'/contacts', title: 'Контакты'},
-// ];
