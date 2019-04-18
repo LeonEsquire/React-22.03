@@ -1,7 +1,17 @@
 import React from 'react';
 import {Link} from 'react-router';
+import {connect} from 'react-redux';
+import {fetchUser} from '../actions/userActions';
 
-export default class User extends React.Component {
+class User extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    this.props.dispatch(fetchUser(this.props.userId));
+  }
+
   render()
   {
     return(
@@ -22,3 +32,12 @@ export default class User extends React.Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    user: state.user.user,
+    userFetched: state.user.fetched
+  };
+}
+
+export default connect(mapStateToProps)(User);
