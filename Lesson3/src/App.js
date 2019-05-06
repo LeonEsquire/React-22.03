@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Menu from './Menu';
+import './App.styl';
+import Menu from 'components/Menu';
+import Login from 'components/Login';
 
 
 class App extends React.Component {
@@ -12,11 +14,12 @@ class App extends React.Component {
       {href:'/contacts', title: 'Контакты'},
     ];
 
-    return <div>
-      <h1>Первое приложение на React</h1>
-      <p>Hello React!</p>
-      <Menu items={menuItems} titleMenu="Основное меню сайта"/>
-    </div>
+    return (
+      <div className="app">
+        <Login/>
+        <Menu items={menuItems} titleMenu="Логотип"/>
+      </div>
+    )
   }
 }
 
